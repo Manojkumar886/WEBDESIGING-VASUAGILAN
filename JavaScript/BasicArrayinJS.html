@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Array Crudl</title>
+</head>
+<body>
+    <script>
+        let array1=["Manojkumar",12,9.8];//compile time execution
+
+        var arraycrudl=new Array();
+
+        arraycrudl.push("Agilan and Vasudevan")
+        arraycrudl.push(89);
+        arraycrudl.push(true);
+        arraycrudl.push('A');
+        arraycrudl.push(89765487654);
+        
+        // alert(arraycrudl.length);
+
+        // for(i=0;i<1;i++)
+        // {
+        //     document.write(arraycrudl)
+        // }
+
+        // document.write(arraycrudl)
+
+        // arraycrudl.pop()
+        // arraycrudl.pop()
+
+        function list(data)
+        {
+            document.write("<br>"+data );
+        }
+
+        arraycrudl.map(list);
+
+        var runtimecvalue=prompt("please tell us which position you want delete")
+
+        arraycrudl=arraycrudl.filter((data,pos)=>
+        {
+            return data!==arraycrudl[runtimecvalue]; 
+        })
+        alert("Aftyer delete a values")
+        arraycrudl.map((data)=>
+        {
+            document.write(data+"<br>");
+        })
+
+
+    </script>
+</body>
+</html>
